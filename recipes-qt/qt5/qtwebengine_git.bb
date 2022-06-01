@@ -84,7 +84,7 @@ COMPATIBLE_MACHINE:aarch64 = "(.*)"
 inherit qmake5
 inherit gettext
 inherit perlnative
-inherit distro_features_check
+inherit features_check
 
 inherit ${@bb.utils.contains("BBFILE_COLLECTIONS", "meta-python2", "pythonnative", "", d)}
 

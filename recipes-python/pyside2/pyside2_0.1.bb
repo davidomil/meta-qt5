@@ -3,7 +3,7 @@ LICENSE = "Unknown & GPLv2 & GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=15a1ca44f90f3ab457d6a4fe7c0f3a19"
 #LIC_FILES_CHKSUM = "file://LICENSE.LGPLv3;md5=8211fde12cc8a4e2477602f5953f5b71"
 
-SRC_URI = "gitsm://code.qt.io/pyside/pyside-setup.git;protocol=http;branch=5.13"
+SRC_URI = "gitsm://github.com/pyside/pyside2-setup.git;protocol=https;branch=5.15"
 
 
 # Modify these as desired
@@ -12,7 +12,7 @@ SRCREV = "f5265a2ab8b19b181e7e7b8175a9598cf2a1fbc9"
 
 S = "${WORKDIR}/git/sources/pyside2"
 
-inherit distutils3
+inherit setuptools3-base
 
 DEPENDS = "qtbase shiboken2-generator-native shiboken2-shibokenmodule"
 RDEPENDS:${PN} = "qtbase"
