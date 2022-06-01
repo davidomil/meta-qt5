@@ -3,11 +3,11 @@ require shiboken2.inc
 DEPENDS += " clang shiboken2-generator-native"
 
 SRC_URI += "file://shibokenmodule-cmake.patch;subdir=git/sources/shiboken2"
-FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
-FILES_${PN} += " ${PYTHON_SITEPACKAGES_DIR}/shiboken2"
+FILES:${PN} += " ${PYTHON_SITEPACKAGES_DIR}/shiboken2"
 
-do_install_append() {
+do_install:append() {
     rm -rf "${D}/${PYTHON_SITEPACKAGES_DIR}/shiboken2_generator"
 }
 

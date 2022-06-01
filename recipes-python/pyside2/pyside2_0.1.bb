@@ -15,7 +15,7 @@ S = "${WORKDIR}/git/sources/pyside2"
 inherit distutils3
 
 DEPENDS = "qtbase shiboken2-generator-native shiboken2-shibokenmodule"
-RDEPENDS_${PN} = "qtbase"
+RDEPENDS:${PN} = "qtbase"
 
 inherit cmake_qt5 pkgconfig 
 

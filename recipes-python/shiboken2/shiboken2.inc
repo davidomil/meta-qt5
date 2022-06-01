@@ -17,7 +17,7 @@ S = "${WORKDIR}/git/sources/shiboken2"
 
 # NOTE: unable to map the following CMake package dependencies: Qt5XmlPatterns
 DEPENDS = "qtbase libxslt libxml2 python3 python3-setuptools python3-wheel"
-RDEPENDS_${PN} += " qtbase python3-numpy "
+RDEPENDS:${PN} += " qtbase python3-numpy "
 
 inherit python3native cmake_qt5
 
